@@ -624,6 +624,7 @@ jobs:
             "SukiSU")
               echo "添加 ${{ inputs.ksu_variant }}..."
               curl -LSs "https://raw.githubusercontent.com/SukiSU-Ultra/SukiSU-Ultra/main/kernel/setup.sh" | bash $BRANCH
+              cd KernelSU && git checkout 85eb4a95b8a61d756ecf53b9c5785e48e1b15039 && cd ..
               ;;
             "ReSukiSU")
               echo "添加 ReSukiSU..."
@@ -636,6 +637,7 @@ jobs:
               fi
               echo "添加 ${{ inputs.ksu_variant }}..."
               curl -LSs "https://raw.githubusercontent.com/SukiSU-Ultra/SukiSU-Ultra/main/kernel/setup.sh" | bash $BRANCH
+              cd KernelSU && git checkout 85eb4a95b8a61d756ecf53b9c5785e48e1b15039 && cd ..
               ;;
           esac
 
